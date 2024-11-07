@@ -1,7 +1,7 @@
 {
   "name": "@doctorassistant/daai-summarization",
   "version": "1.0.0",
-  "description": "A custom web component for a recording",
+  "description": "A custom web component for text summarization",
   "main": "dist/DaaiSummarization.js",
   "scripts": {
     "build": "mkdir -p dist && cp -r src/* dist/ && cp package.json package-lock.json index.html readme.md dist/",
@@ -18,9 +18,6 @@
   "devDependencies": {
     "lite-server": "^2.6.1",
     "prettier": "3.3.3"
-  },
-  "dependencies": {
-    "dexie": "^4.0.8"
   },
   "type": "module"
 }
