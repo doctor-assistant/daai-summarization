@@ -67,7 +67,7 @@ onde ele for chamado vai ser renderizado nesse modelo:
 // ⚠️ A propriedade apiKey é obrigatória, sem ela o componente não irá fazer requisições a api
 apikey = 'aqui você deve passar a chave da api para realizar as requisições';
 
-// ⚠️ A propriedade texts é obrigztória, nela você deve passar uma lista de textos clínicos contendo patient_id, dt_cn (data em formato ISO), e cn (conteúdo clínico).
+// ⚠️ A propriedade texts é obrigatória, nela você deve passar uma lista de textos clínicos contendo patient_id, dt_cn (data em formato ISO), e cn (conteúdo clínico).
 texts = '';
 ```
 
