@@ -303,7 +303,6 @@ class DaaiSumarization extends HTMLElement {
     const getImageButton = this.shadowRoot.querySelector('#button-img');
     const buttonAvalibleIcon = OPEN_SUMMARY_ICON;
 
-    console.log(getImageButton, 'getImageButton');
     generateButton.innerText = 'Gerando';
     generateButton.style.color = '#fffff';
 
@@ -417,4 +416,4 @@ class DaaiSumarization extends HTMLElement {
   }
 }
 
-customElements.define('daai-sumarization', DaaiSumarization);
+customElements.define('daai-summarization', DaaiSumarization);
