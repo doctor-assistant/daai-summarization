@@ -15,6 +15,8 @@ class DaaiSumarization extends HTMLElement {
     this.summarizedText = '';
     this.apiKey = '';
     this.texts = '';
+    this.onSuccess = null;
+    this.onError = null;
 
     const shadow = this.attachShadow({ mode: 'open' });
     shadow.innerHTML = `
@@ -350,7 +352,12 @@ class DaaiSumarization extends HTMLElement {
 
   async summarizeTexts() {
     try {
-      this.summarization(this.apiKey, this.textsToSumarize);
+      this.summarization(
+        this.apiKey,
+        this.textsToSumarize,
+        this.onSuccess,
+        this.onError
+      );
     } catch (error) {
       console.error('Erro na sumarização:', error);
     }
