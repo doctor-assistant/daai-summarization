@@ -203,7 +203,21 @@ Caso a sua aplicação não utilize react, vue.js e angular, você pode optar po
   </head>
   <body>
     <h1>Exemplo de uso do componente via cdn</h1>
-    <daai-summarization apiKey="YOUR_API_KEY"></daai-summarization>
+    <daai-summarization
+      apiKey="YOUR_API_KEY"
+      texts='[
+            {
+              "patient_id": 2504703,
+              "dt_cn": "2022-10-24T16:30:00.000Z",
+              "cn": "PACIENTE VEIO COM A ESPOSA...ESTEVE INTERNADO RECENTEMENTE POR HEMORRAGIA DIGESTIVA BAIXA..."
+            },
+            {
+              "patient_id": 2504703,
+              "dt_cn": "2022-10-24T10:00:00.000Z",
+              "cn": "O PACIENTE RELATOU MELHORA APÓS O TRATAMENTO..."
+            }
+        ]'
+    ></daai-summarization>
   </body>
 </html>
 ```
