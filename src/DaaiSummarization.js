@@ -8,7 +8,7 @@ import {
   formatMarkdown,
 } from './scripts/FormatFunctions.js';
 
-class DaaiSumarization extends HTMLElement {
+class DaaiSummarization extends HTMLElement {
   constructor() {
     super();
     this.textsToSumarize = '';
@@ -423,4 +423,4 @@ class DaaiSumarization extends HTMLElement {
   }
 }
 
-customElements.define('daai-summarization', DaaiSumarization);
+customElements.define('daai-summarization', DaaiSummarization);

@@ -1,10 +1,10 @@
 {
   "name": "@doctorassistant/daai-summarization",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A custom web component for text summarization",
   "main": "dist/DaaiSummarization.js",
   "scripts": {
-    "build": "mkdir -p dist && cp -r src/* dist/ && cp package.json package-lock.json index.html readme.md dist/",
+    "build": "mkdir -p dist && cp -r src/* dist/ && cp package.json package-lock.json index.html readme.md readme_summary.png dist/",
     "start": "lite-server"
   },
   "keywords": [
