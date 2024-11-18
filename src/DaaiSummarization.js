@@ -29,7 +29,6 @@ class DaaiSummarization extends HTMLElement {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 10px;
         font-family: "Inter", sans-serif;
       }
       .container-content {
@@ -299,7 +298,9 @@ class DaaiSummarization extends HTMLElement {
 
   async summarization(apikey, texts, onSuccess, onError) {
     const url =
-      'https://apim.doctorassistant.ai/api/summary/perform_summarization';
+      this.modeApi === 'dev'
+        ? 'https://apim.doctorassistant.ai/api/sandbox/summary'
+        : 'https://apim.doctorassistant.ai/api/production/summary';
 
     const generateButton = this.shadowRoot.querySelector('#generate');
     const getImageButton = this.shadowRoot.querySelector('#button-img');
@@ -364,7 +365,7 @@ class DaaiSummarization extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ['theme', 'onSuccess', 'onError', 'apiKey', 'modeApi', 'texts'];
+    return ['theme', 'onSuccess', 'onError', 'apiKey', 'texts'];
   }
 
   connectedCallback() {
@@ -396,7 +397,10 @@ class DaaiSummarization extends HTMLElement {
     }
     applyThemeAttributes(this.theme, this);
     this.apiKey = this.getAttribute('apikey');
-    this.modeApi = this.getAttribute('modeApi');
+
+    const apikey = this.getAttribute('apikey');
+    this.modeApi = apikey && apikey.startsWith('PRODUCTION') ? 'prod' : 'dev';
+
     this.onSuccess = this.getAttribute('onSuccess');
     this.textsToSumarize = this.formatText(this.getAttribute('texts'));
     this.texts = this.getAttribute('texts');

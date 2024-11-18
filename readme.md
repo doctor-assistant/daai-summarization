@@ -64,7 +64,7 @@ onde ele for chamado vai ser renderizado nesse modelo:
 ### propriedades de funcionamento
 
 ```js
-// ⚠️ A propriedade apiKey é obrigatória, sem ela o componente não irá fazer requisições a api
+// ⚠️ A propriedade apiKey é obrigatória, sem ela o componente não irá fazer requisições a api, identificamos o ambiente de execução através da apiKey
 apikey = 'aqui você deve passar a chave da api para realizar as requisições';
 
 // ⚠️ A propriedade texts é obrigatória, nela você deve passar uma lista de textos clínicos contendo patient_id, dt_cn (data em formato ISO), e cn (conteúdo clínico).
